@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self Executing Anonymous Function and Functional Programming</title>
+  </head>
+  <body>
+    <script>
+      // Self Executing Anonymous Function(SEAF).
+      // IIFE(IMMEDIATELY INVOKED FUNCTION EXPRESSION) is an Asynchronous Function.
+      (function sayHello() {
+        console.log("I say Hello");
+        console.log("I say Hello again");
+      })();
+
+      (function sayHi() {
+        console.log("HI");
+        console.log("I say again HI");
+      })();
+    </script>
+  </body>
+</html>

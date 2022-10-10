@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call Method</title>
+  </head>
+  <body>
+    <script>
+      // let name = {
+      //   firstName: "Dev",
+      //   lastName: "Mishra",
+      //   printFullName() {
+      //     console.log(this.firstName + " " + this.lastName);
+      //   },
+      // };
+
+      // name.printFullName();
+
+      // let name2 = {
+      //   firstName: "sachin",
+      //   lastName: "Tendulkar",
+      //   printFullName() {
+      //     console.log(this.firstName + " " + this.lastName);
+      //   },
+      // };
+
+      // name.printFullName.call(name2);
+      // Using CALL method we can use FUNCTION BORROWING method.
+      // we can borrow functions from other objects & use it with data of some other objects.
+
+      // Instead of above 2 methods we can also use :
+
+      let name = {
+        firstName: "Dev",
+        lastName: "Mishra",
+      };
+
+      let printFullName = function (hometown, state) {
+        console.log(
+          this.firstName +
+            " " +
+            this.lastName +
+            " from " +
+            hometown +
+            "," +
+            state
+        );
+      };
+
+      printFullName.call(name, "Dehradun", "Uttrakhand");
+      // The first parameter i.e.(name) always reference to the "this" variable.
+      // and the later arguments can be for the function.
+
+      let name2 = {
+        firstName: "sachin",
+        lastName: "Tendulkar",
+      };
+
+      // "Here lies the concept function borrowed"
+      printFullName.call(name2, "mumbai", "maharashtra");
+      printFullName.apply(name2, ["mumbai", "maharashtra"]);
+
+      // Normally in call method we can pass second  arguments individually with comma separated
+      // For example ("mumbai","maharashtra")
+      // In this case  i.e. in apply method we can pass second arguments as an Array list.
+      // This is the difference between call and apply method.
+    </script>
+  </body>
+</html>

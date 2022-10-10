@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slice & Splice</title>
+  </head>
+  <body>
+    <script>
+      var users = ["Ted", "Tim", "Ton", "Sam", "Sor", "Sod"];
+      // "Ted" at 0th position & "Sod" at 5th position
+      console.log(users.slice(1, 5));
+
+      var users = ["Ted", "Tim", "Ton", "Sam", "Sor", "Sod"];
+      console.log(users.slice(1));
+
+      var developers = ["python", "Java", "Javascript", "Kotlin", "Go"];
+      console.log(developers.slice(2));
+
+      var users = ["Ted", "Tim", "Ton", "Sam", "Sor", "Sod"];
+      console.log(users.slice(1));
+
+      // SPLICE:
+      var users = ["Ted", "Tim", "Ton", "Sam", "Sor", "Sod"];
+      console.log(users.slice(1));
+      users.splice(1, 3, "HI", "BYE");
+      // splice concept: the "Tim" "Ton" "Sam" replaces the value "HI"
+      // i.e. expected o/p = ["Ted","HI","Sor","Sod"]
+      console.log(users);
+
+      users.splice(3, 5, "HELLO");
+      console.log(users);
+    </script>
+  </body>
+</html>

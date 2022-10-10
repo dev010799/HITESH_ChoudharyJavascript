@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply Method</title>
+  </head>
+  <body>
+    <script>
+      // Normally in call method we can pass second  arguments individually with comma separated
+      // For example ("mumbai","maharashtra")
+      // In this case  i.e. in apply method we can pass second arguments as an Array list.
+      // This is the difference between call and apply method.
+      // for example:
+
+      // let name = {
+      //   firstName: "Dev",
+      //   lastName: "Mishra",
+      //   printFullName(Hometown) {
+      //     console.log(this.firstName + this.lastName + "from" + Hometown);
+      //   },
+      // };
+      // printFullName.apply(name);
+
+      // <------------------------------------------>
+      // 2nd Example:
+
+      let array = Math.max.apply(null, [1, 2, 3, 4, 5, 6, 7, 8]);
+      console.log(array);
+
+      // o/p : 8
+
+      let array2 = Math.round.apply(null, [87.8]);
+      console.log(array2);
+
+      // o/p : 88
+
+      let array3 = Math.min.apply(null, [34.6, 65.7, 79.0]);
+      console.log(array3);
+
+      // o/p : 34.6
+    </script>
+  </body>
+</html>

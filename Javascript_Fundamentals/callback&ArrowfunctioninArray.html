@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback and arrow function in array</title>
+  </head>
+  <body>
+    <script>
+      // var isEven = (element) => {
+      // if (element % 2 === 0) {
+      //   return true;
+      // }
+      // return false;
+      // return element % 2 === 0;
+      // };
+      // console.log(isEven(4));
+      // var result = [2, 4, 9, 8].every(isEven);
+      // console.log(result);
+
+      // var result = [2, 3, 9, 8].every((e) => e % 2 === 0);
+      // every keyword is very important.
+      // every keyword checks each element in an array.
+      // console.log(result);
+
+      //  If we use {} curly braces then only we have to written return.
+
+      // Call back function best example
+
+      // setTimeout(function () {
+      //   console.log("timer");
+      // }, 5000);
+
+      // function x(y) {
+      //   console.log("x");
+      //   y();
+      // }
+      // x(function () {
+      //   console.log("y");
+      // });
+      let count = 0;
+      document
+        .getElementById("clickMe")
+        .addEventListener("click", function xyz() {
+          document.write("Button Clicked", ++count);
+        });
+    </script>
+  </body>
+</html>

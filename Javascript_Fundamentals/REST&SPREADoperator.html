@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest & Spread operator</title>
+  </head>
+  <body>
+    <script>
+      // ...args , ...hitesh, ...dev etc(this is the SPREAD as well as REST Operator)
+      // ...args are the most common variable name
+      var returnedValue = Math.max(2, 5, 7, 4, 2, 8);
+      // Expected output: 8
+      console.log(returnedValue);
+
+      var myObj = {};
+
+      Object.assign(myObj, { a: 1, b: 2, c: 3 }, { z: 9, y: 8, x: 7 });
+      console.log(myObj);
+
+      function sumOne(a, b, c) {
+        return a + b + c;
+      }
+
+      var myA = [5, 4, 9];
+      // console.log(sumOne(...myA));
+    </script>
+  </body>
+</html>

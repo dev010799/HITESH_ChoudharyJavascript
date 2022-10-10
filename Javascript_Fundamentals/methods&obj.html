@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Methods and Objects</title>
+  </head>
+  <body>
+    <script>
+      var user = {
+        firstName: "Hitesh",
+        lastName: "Choudhary",
+        role: "Admin",
+        loginCount: 32,
+        facebookSignedIn: true,
+        courseList: [],
+        buyCourse: function (courseName) {
+          this.courseList.push(courseName);
+        },
+        getCourseCount: function () {
+          return `${this.firstName} is enrolled in total of ${this.courseList.length} course`;
+        },
+      };
+
+      var courseList = true;
+      console.log(user.firstName);
+      console.log(user.getCourseCount());
+      user.buyCourse("React JS course");
+      user.buyCourse("Angular course");
+      user.buyCourse("C++ course");
+      user.buyCourse("Devops course");
+      console.log(user.getCourseCount());
+    </script>
+  </body>
+</html>

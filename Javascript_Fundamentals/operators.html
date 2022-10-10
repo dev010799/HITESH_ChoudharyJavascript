@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operators in Javascript</title>
+  </head>
+  <body>
+    <script>
+      var num1 = 23;
+      var num2 = 34;
+
+      console.log(num1 + num2);
+
+      var answer = num2 > num1;
+      console.log(answer);
+
+      // practice code:
+      // D = (L - S)/L *100;
+      // a + b * c / d * e
+
+      var sellingPrice = 199;
+      var listingPrice = 799;
+
+      var discountPercent =
+        ((listingPrice - sellingPrice) / listingPrice) * 100;
+
+      console.log("Discount percentage is :" + discountPercent);
+
+      displayDiscountPercentage = Math.round(discountPercent);
+
+      console.log(displayDiscountPercentage + "% off");
+
+      // Typeof operator:
+
+      var result = listingPrice > sellingPrice;
+      console.log(typeof result);
+    </script>
+  </body>
+</html>

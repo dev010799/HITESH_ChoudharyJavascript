@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Computed Properties in JS</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="color-hover">
+      <div class="color red"></div>
+      <div class="color cyan"></div>
+      <div class="color violet"></div>
+      <div class="color orange"></div>
+      <div class="color pink"></div>
+    </div>
+    <div class="center"></div>
+    <script>
+      const red = document.querySelector(".red");
+      const cyan = document.querySelector(".cyan");
+      const violet = document.querySelector(".violet");
+      const orange = document.querySelector(".orange");
+      const pink = document.querySelector(".pink");
+
+      const center = document.querySelector(".center");
+
+      // console.log(window.getComputedStyle(red).backgroundColor);
+
+      // window object is have lots of properties but getComputedStyle is one of them.
+
+      const getBGColor = (selectedElement) => {
+        return window.getComputedStyle(selectedElement).backgroundColor;
+      };
+      // console.log(getBGColor(orange));
+      // var Color = getBGColor(pink);
+
+      // pink.addEventListener("mouseenter", () => {
+      //   center.style.background = pinkElementColor;
+      // });
+
+      const magicColorChanger = (element, color) => {
+        return element.addEventListener("mouseenter", () => {
+          center.style.background = color;
+        });
+      };
+
+      magicColorChanger(red, getBGColor(red));
+      magicColorChanger(cyan, getBGColor(cyan));
+      magicColorChanger(violet, getBGColor(violet));
+      magicColorChanger(orange, getBGColor(orange));
+      magicColorChanger(pink, getBGColor(pink));
+
+      // when the computed property is calculated use:
+      // 1. backgroundColor instead of
+      // 2. background-color
+    </script>
+  </body>
+</html>

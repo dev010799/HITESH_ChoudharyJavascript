@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confusing part of this in Javascript</title>
+  </head>
+  <body>
+    <script>
+      // IMPORTANT NOTE: For all REGULAR FUNCTION calls this points towards WINDOW OBJECT.
+      console.log(this);
+
+      var user = {
+        firstName: "Hitesh",
+        courseCount: 4,
+        getCourseCount: function () {
+          console.log("LINE 7", this);
+        },
+      };
+
+      user.getCourseCount();
+      // the above function is not an regular function because this one is through an object.
+      // <------------------------------------------------------------------>
+      // REGULAR FUNCTION CALL:
+
+      function sayHello() {
+        console.log("Hello");
+      }
+      sayHello();
+    </script>
+  </body>
+</html>

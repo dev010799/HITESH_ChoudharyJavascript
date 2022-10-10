@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROTOTYPE IN JAVASCRIPT</title>
+  </head>
+  <body>
+    <script>
+      var User = function (firstName, courseCount) {
+        this.firstName = firstName;
+        this.courseCount = courseCount;
+        this.getCourseCount = function () {
+          console.log(`Course count is: ${this.courseCount}`);
+        };
+      };
+
+      User.prototype.getFirstname = function () {
+        console.log(`Your firstname is : ${this.firstName}`);
+      };
+
+      var hitesh = new User("hitesh", 2);
+      hitesh.getCourseCount();
+      hitesh.getFirstname();
+
+      var sam = new User("sam", 1);
+      sam.getCourseCount();
+      sam.getFirstname();
+    </script>
+  </body>
+</html>

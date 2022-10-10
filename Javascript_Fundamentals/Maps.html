@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAPS()</title>
+  </head>
+  <body>
+    <script>
+      // Note:MAPS are not objects
+
+      var myMap = new Map();
+
+      myMap.set(1, "uno");
+      myMap.set(2, "dos");
+      myMap.set(3, "tres");
+      myMap.set(4, "Cuatro");
+      console.log(myMap);
+
+      for (let [key, value] of myMap) {
+        console.log(`key is ${key}`);
+      }
+
+      for (let [key, value] of myMap) {
+        console.log(`key is : ${key} and value is : ${value}`);
+      }
+
+      // Here in the maps the KEYS are considered as indexes.
+      // So thats why it doesnt gives directly the keys.
+
+      myMap.forEach((v, k) => console.log(`${v} and key is ${k}`));
+      myMap.delete(3);
+      console.log(myMap);
+      // <--------------------------------------------------------------------->
+      // 2nd Example:
+
+      var myMap = new Map();
+
+      myMap.set(1, "Dev");
+      myMap.set(2, "Rounak");
+      myMap.set(3, "Abhishek");
+      myMap.set(4, "Monty");
+      console.log(myMap);
+
+      for (let [values, key] of myMap) {
+        console.log(`key is ${key}`);
+      }
+
+      for (let [key, value] of myMap) {
+        console.log(`key is : ${key} and value is : ${value}`);
+      }
+
+      myMap.forEach((v, k) =>
+        console.log(`
+      ${v} and key is ${k}
+      `)
+      );
+      // <----------------------------------------------------------------->
+      // To check if a key exists in a Map, use the .has() method:
+      //  map.has(key)
+      // const map = new Map([
+      //   [1, 2],
+      //   [3, 4],
+      // ]);
+      // console.log(map.has(8));
+      // // false.
+      // console.log(map.has(3));
+      // // true
+      // console.log(map.has(43));
+      // // false
+      // console.log(map.has(1));
+
+      // <-------------------------------------------------------------------->
+      // Getting and Settings elements in Map:
+      // Use .get(key) to get value by key
+      // Use .set(key,value) to assign a value to key
+      // If the element with the specified key doesn't exists in the map, .get returns undefined.
+      // For examples:
+      // const map = new Map();
+      // console.log(map.get(1));
+      // map.set(1, 2).set(3, 4);
+      // console.log(map.get(3));
+      // console.log(map.get(1));
+
+      // map.set(2, 5).set(4, 9).set(9, 8);
+      // console.log(map.get(2));
+      // console.log(map.get(4));
+      // console.log(map.get(9));
+
+      // <----------------------------------------------------------------------->
+
+      // Getting the nummber of elements of a map:
+      // Use the .size property to get the number of elements of a Map.
+      const map = new Map([
+        [1, 2],
+        [3, 4],
+        [2, 5],
+        [9, 8],
+        [2, 4],
+      ]);
+      console.log(map.size);
+    </script>
+  </body>
+</html>

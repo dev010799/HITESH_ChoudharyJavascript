@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For of and For in loop</title>
+  </head>
+  <body>
+    <script>
+      // <------------------------------------------------------------------------------>
+      // FOR OF:
+      const names = ["Youtube", "Facebook", "Instagram", "Netflix", "Amazon"];
+      for (const n of names) {
+        console.log(n);
+      }
+
+      // <------------------------------------------------------------------------------->
+      // FOR IN
+      const symbols = {
+        yt: "Youtube",
+        ig: "Instagram",
+        fb: "Facebook",
+        lco: "LearnCodeOnline.in",
+      };
+
+      // for (const n in symbols) {
+      //   console.log(symbols[n]);
+      // }
+
+      for (const n in symbols) {
+        console.log(`Key is: ${n} and value is: ${symbols[n]}`);
+      }
+    </script>
+  </body>
+</html>

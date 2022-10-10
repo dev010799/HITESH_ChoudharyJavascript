@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Just for Practice</title>
+  </head>
+  <body>
+    <script>
+      const uid = "abc123";
+
+      var fullName = "Dev Mishra";
+      var email = "dev010799@gmail.com";
+      var password = "dev909090";
+      var confirmPassword = "dev909090";
+      var courseCount = 0;
+      var isLoggedINFromGoogle = false;
+
+      // fullName = prompt("Enter your name");  this is also the way one by one of our output
+
+      // This is the second method to print the values of variables
+      console.log(uid);
+      // console.log has no explicit return value
+      console.log(fullName);
+      console.log(email);
+      console.log(password);
+      console.log(confirmPassword);
+      console.log(courseCount);
+      console.log(isLoggedINFromGoogle);
+
+      // The third method is backticks or we can say template literals
+
+      console.log(`
+      With Unique ID: ${uid}
+      User is : ${fullName}
+      and his email is : {dev010799@gmail.com} 
+      and uses the password : {dev909090}
+
+
+      
+      `);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocumentCLOSURES</title>
+  </head>
+  <body>
+    <script>
+      // SIMPLEST EXAMPLE OF LEXICAL SCOPING (CLOSURES)
+      // closure concept: inner function jo hai vo apne parent function as well as global variable / parameters ko bhi access kar sakta hai  dono ko access kar sakta hai
+
+      // const outerFunc = (a) => {
+      //   let b = 10;
+      //   const innerFunc = () => {
+      //     let sum = a + b;
+      //     console.log(`the sum of two no. is ${sum}.`);
+      //   };
+      //   return innerFunc();
+      // };
+      // let inner = outerFunc(5);
+      // console.log.dir(inner);
+      // inner();
+
+      // Example 2:(LEXICAL SCOPING)
+
+      // const outerFunc = (x) => {
+      //   let y = 23;
+      //   const innerFunc = () => {
+      //     let sum = x + y;
+      //     console.log(`The sum of two numbers is ${sum}`);
+      //   };
+      //   innerFunc();
+      // };
+      // outerFunc(32);
+
+      // CLOSURE(PURE) EXAMPLE
+      // const outerFunc = (x) => {
+      //   let y = 23;
+      //   const innerFunc = () => {
+      //     let sum = x + y;
+      //     console.log(`The sum of two numbers is ${sum}`);
+      //   };
+      //   return innerFunc();
+      // };
+      // let inner = outerFunc(32);
+      // console.dir(inner);
+      // inner();
+
+      // The Basic and easy Example of closure is:
+      function x() {
+        var a = 10;
+        function y() {
+          console.log(a);
+        }
+        y();
+      }
+      x();
+    </script>
+  </body>
+</html>

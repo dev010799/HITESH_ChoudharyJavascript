@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      var user = {
+        firstName: "Hitesh",
+        lastName: "Choudhary",
+        role: "Admin",
+        loginCount: 32,
+        facebookSignedIn: true,
+      };
+
+      console.log(user.firstName);
+      // dot feature is used for accessing an object
+      console.log(user["lastName"]);
+
+      console.log(user.loginCount);
+      user.loginCount = 44;
+      console.log(user.loginCount);
+      console.log(user);
+      console.table(user);
+
+      //  <--------------------------------------------------------------->
+      // Assignment
+      var iPhone = {
+        brandName: "Apple",
+        softwareOS: "iOS 3",
+        connectivity: "Wifi",
+        camera: "RearCamera",
+        sensors: "ProximitySensors",
+      };
+
+      console.log(iPhone);
+      console.table(iPhone);
+      // <--------------------------------------------------------------------------->
+      let a = {
+        name: "Dev",
+      };
+
+      let b = {
+        name: "Rounak",
+      };
+
+      let c = { ...a, ...b };
+      console.log(c);
+
+      // Objects are the SPINALCORD of JAVASCRIPT
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Loops</title>
+  </head>
+  <body>
+    <script>
+      // for (let i = 0; i <= 10; i++) {
+      //   console.log(i);
+      // }
+
+      const myStates = [
+        "Rajasthan",
+        "Delhi",
+        "Assam",
+        1947,
+        "TamilNadu",
+        "Maharashtra",
+      ];
+      for (let i = 0; i <= myStates.length; i++) {
+        if (typeof myStates[i] !== "string") continue;
+        console.log(myStates[i]);
+      }
+
+      // due to "=" which is shown in for loop condition i.e.(i <= myStates.length)   line no.23
+      // in the output shown undefined due to that "="
+      // if we remove that "=" then undfined is gone
+      // this process is known as DEBUGGING
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      tipper("80");
+
+      function tipper(a) {
+        var bill = parseInt(a);
+        console.log(bill + 5);
+      }
+
+      // Functions declarations are scanned and made available
+
+      var bigTipper = function (a) {
+        var bill = parseInt(a);
+        console.log(bill + 15);
+      };
+
+      bigTipper(200);
+
+      // Variable declarations are scanned and made undefined
+
+      console.log(name);
+      var name = "Hitesh";
+
+      function sayName() {
+        var name = "MR.H";
+        console.log(name);
+      }
+
+      sayName();
+
+      // console.log(foo);  #undefined.
+      // var args;     #Hoisted variable declaration.
+      // console.log(foo); (this is the Not defined) #undefined & Not defined are not the same concept
+    </script>
+  </body>
+</html>

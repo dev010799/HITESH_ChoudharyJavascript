@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions in variable</title>
+  </head>
+  <body>
+    <script>
+      function getUserRole(name, role) {
+        switch (role) {
+          case "admin":
+            return `${name} is admin with all access`;
+            break; /*this is not necessary */
+
+          case "subadmin":
+            return `${name} is with access to create/delete courses`;
+            break;
+
+          case "testprep":
+            return `${name} is with access to create/delete tests`;
+            break;
+
+          case "user":
+            return `${name} is user consume  content`;
+            break;
+
+          default:
+            return `{name} is a trial user`;
+        }
+      }
+
+      console.log(getUserRole("hitesh", "user"));
+
+      var getRole = getUserRole("sammy", "user");
+      console.log(getRole);
+    </script>
+  </body>
+</html>

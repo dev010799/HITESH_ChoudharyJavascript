@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // import User from "/objectsJS.html"; (the newer syntax which is used for User acces)
+      // most common syntax is used in the npm etc (we can use any of them i.e. line 11 or line 13)
+      // main goal is to access the User which is class being declared in classJS.html
+      const User = require("./classJS.html");
+
+      const hitesh = new User("hitesh", "hitesh@lco.dev");
+      console.log(hitesh.getInfo());
+      hitesh.enrollCourse("React Bootcamp");
+      hitesh.enrollCourse("Angular Bootcamp");
+      console.log(hitesh.getCourseList());
+      courses.forEach((c) => console.log(c));
+    </script>
+  </body>
+</html>

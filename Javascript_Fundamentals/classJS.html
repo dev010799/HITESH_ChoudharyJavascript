@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes & Objects</title>
+  </head>
+  <body>
+    <script>
+      class User {
+        constructor(name, email) {
+          this.name = name;
+          this.email = email;
+        }
+        courseList = [];
+
+        getInfo() {
+          return { name: this.name, email: this.email };
+        }
+
+        enrollCourse(name) {
+          this.courseList.push(name);
+        }
+
+        getCourseList() {
+          return this.courseList;
+        }
+      }
+
+      // module.exports = User;
+
+      const rock = new User("rock", "rock@rock.com");
+      console.log(rock.getInfo());
+      rock.enrollCourse("Angular Bootcamp");
+      console.log(rock.getCourseList);
+      console.log(rock.courseList);
+    </script>
+  </body>
+</html>
